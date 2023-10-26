@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icp_contract_backend": {
+      "main": "src/icp_contract_backend/main.mo",
+      "type": "motoko"
+    },
+    "icp_contract_frontend": {
+      "dependencies": [
+        "icp_contract_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_contract_frontend/src/index.html"
+      },
+      "source": [
+        "src/icp_contract_frontend/assets",
+        "dist/icp_contract_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
